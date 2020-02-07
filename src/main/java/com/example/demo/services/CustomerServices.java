@@ -8,7 +8,7 @@ public interface CustomerServices {
 
     Customer findCustomerById(Long id);
 
-    List<Customer> findCustomer();
+    List<Customer> findCustomers();
 
     Customer saveCustomer(Customer customer);
 
