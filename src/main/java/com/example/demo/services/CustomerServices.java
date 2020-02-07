@@ -14,7 +14,7 @@ public interface CustomerServices {
 
     void deleteCustomer(Long id);
 
-    void addCustomer(Long id);
+    void addCustomer(Customer customer);
 
     List<Customer> findCustomerByName(String name);
 
