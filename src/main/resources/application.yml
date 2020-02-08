@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: 58Gjcf2JJI
+    password: vxrpKD7PrQ
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+    dialect: org.hibernate.dialect.MySQL5Dialect
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
