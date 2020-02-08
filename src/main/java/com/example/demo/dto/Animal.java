@@ -18,8 +18,8 @@ public class Animal implements Serializable {
     @Column(name = "age", nullable = false)
     private Integer age;
 
-    @Column(name = "typesex", nullable = false)
-    private String typesex;
+    @Column(name = "type_sex", nullable = false)
+    private String typeSex;
 
     public Long getId() {
         return id;
@@ -46,10 +46,10 @@ public class Animal implements Serializable {
     }
 
     public String getTypesex() {
-        return typesex;
+        return typeSex;
     }
 
     public void setTypesex(String typesex) {
-        this.typesex = typesex;
+        this.typeSex = typesex;
     }
 }
