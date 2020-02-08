@@ -6,21 +6,19 @@ import java.util.List;
 
 public interface AnimalServices {
 
-    Animal findCustomerById(Long id);
+    Animal findAnimalById(Long id);
 
-    List<Animal> findCustomers();
+    List<Animal> findAnimals();
 
-    Animal saveCustomer(Animal animal);
+    Animal saveAnimal(Animal animal);
 
-    void deleteCustomer(Long id);
+    void deleteAnimal(Long id);
 
-    void addCustomer(Animal animal);
+    void addAnimal(Animal animal);
 
-    List<Animal> findCustomerByName(String name);
+    List<Animal> findAnimalByName(String name);
 
-    List<Animal> findCustomerBySurname(String surname);
+    List<Animal> findAnimalByAge(Integer age);
 
-    List<Animal> findCustomerByAge(Integer age);
-
-    List<Animal> findCustomerByTypeSex(String typeSex);
+    List<Animal> findAnimalByTypeSex(String typeSex);
 }

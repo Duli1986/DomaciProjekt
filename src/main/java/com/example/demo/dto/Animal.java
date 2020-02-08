@@ -14,9 +14,6 @@ public class Animal {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "surname")
-    private String surname;
-
     @Column(name = "age")
     private Integer age;
 
@@ -37,14 +34,6 @@ public class Animal {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public Integer getAge() {

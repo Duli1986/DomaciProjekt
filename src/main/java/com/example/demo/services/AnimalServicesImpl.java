@@ -18,34 +18,34 @@ public class AnimalServicesImpl implements AnimalServices {
 
 
     @Override
-    public Animal findCustomerById(Long id) {
+    public Animal findAnimalById(Long id) {
         return animalRepository.findById(id).get();
     }
 
     @Override
-    public List<Animal> findCustomers() {
+    public List<Animal> findAnimals() {
         List<Animal> animalList = animalRepository.findAll().stream().collect(Collectors.toList());
         return animalList;
     }
 
     @Override
-    public Animal saveCustomer(Animal animal) {
+    public Animal saveAnimal(Animal animal) {
         return animalRepository.save(animal);
     }
 
     @Override
-    public void deleteCustomer(Long id) {
+    public void deleteAnimal(Long id) {
         animalRepository.deleteById(id);
     }
 
     @Override
-    public void addCustomer(Animal animal) {
+    public void addAnimal(Animal animal) {
         animalRepository.saveAndFlush(animal);
     }
 
     @Override
-    public List<Animal> findCustomerByName(String name) {
-        List<Animal> findAnimalByName = findCustomers().
+    public List<Animal> findAnimalByName(String name) {
+        List<Animal> findAnimalByName = findAnimals().
                 stream()
                 .filter(x -> x.getName().equals(name))
                 .collect(Collectors.toList());
@@ -54,18 +54,8 @@ public class AnimalServicesImpl implements AnimalServices {
     }
 
     @Override
-    public List<Animal> findCustomerBySurname(String surname) {
-        List<Animal> findAnimalBySurname = findCustomers()
-                .stream()
-                .filter(x -> x.getSurname().equals(surname))
-                .collect(Collectors.toList());
-
-        return findAnimalBySurname;
-    }
-
-    @Override
-    public List<Animal> findCustomerByAge(Integer age) {
-        List<Animal> findAnimalByAge = findCustomers()
+    public List<Animal> findAnimalByAge(Integer age) {
+        List<Animal> findAnimalByAge = findAnimals()
                 .stream()
                 .filter(x -> x.getAge().equals(age))
                 .collect(Collectors.toList());
@@ -74,8 +64,8 @@ public class AnimalServicesImpl implements AnimalServices {
     }
 
     @Override
-    public List<Animal> findCustomerByTypeSex(String typeSex) {
-        List<Animal> findAnimalByTypeSexes = findCustomers()
+    public List<Animal> findAnimalByTypeSex(String typeSex) {
+        List<Animal> findAnimalByTypeSexes = findAnimals()
                 .stream()
                 .filter(x -> x.getTypesex().equals(typeSex))
                 .collect(Collectors.toList());
