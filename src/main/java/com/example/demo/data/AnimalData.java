@@ -7,10 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 
 public class AnimalData implements CommandLineRunner {
 
-    public AnimalData(AnimalRepository animalRepository) {
-        this.animalRepository = animalRepository;
-    }
-
     @Autowired
     private AnimalRepository animalRepository;
 
